@@ -1,0 +1,11 @@
+services:
+  aavail-api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+      - ./reports:/app/reports
+    environment:
+      AAVAIL_LOG_PATH: /app/artifacts/predictions.jsonl
